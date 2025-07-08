@@ -13,3 +13,6 @@ list(APPEND TARGET_LIBRARIES ${OpenCV_LIBRARIES})
 
 add_executable(brightness src/brightness.cpp)
 target_link_libraries(brightness ${TARGET_LIBRARIES})
+
+add_executable(enhance_gray_image src/enhance_gray_image.cpp)
+target_link_libraries(enhance_gray_image ${TARGET_LIBRARIES})
