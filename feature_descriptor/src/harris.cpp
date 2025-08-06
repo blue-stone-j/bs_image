@@ -65,9 +65,9 @@ cv::Mat Harris::filter_uchar(const cv::Mat &in_, const cv::Mat &kernel_)
 {
   cv::Mat res     = cv::Mat::ones(in_.size(), CV_32FC1);
   int kernel_size = kernel_.rows;
-  for (size_t r = 0; r < in_.rows; ++r)
+  for (int r = 0; r < in_.rows; ++r)
   {
-    for (size_t c = 0; c < in_.cols; ++c)
+    for (int c = 0; c < in_.cols; ++c)
     {
       float v = 0;
       // int cnt = 0;
@@ -95,9 +95,9 @@ cv::Mat Harris::filter_float(const cv::Mat &in_, const cv::Mat &kernel_)
 {
   cv::Mat res     = cv::Mat::zeros(in_.size(), CV_32FC1);
   int kernel_size = kernel_.rows;
-  for (size_t r = 0; r < in_.rows; ++r)
+  for (int r = 0; r < in_.rows; ++r)
   {
-    for (size_t c = 0; c < in_.cols; ++c)
+    for (int c = 0; c < in_.cols; ++c)
     {
       float v = 0;
       // int cnt = 0;

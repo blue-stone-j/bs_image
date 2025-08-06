@@ -1,8 +1,11 @@
 
 
+
+#include <gtest/gtest.h>
+
 #include "canny.h"
 
-int main(int argc, char **argv)
+TEST(CannyTest, test1)
 {
   cv::Mat img = imread("../assets/woman.jpg", cv::IMREAD_GRAYSCALE); // 从文件中加载灰度图像
 
@@ -10,8 +13,7 @@ int main(int argc, char **argv)
   if (img.empty())
   {
     printf("读取图像文件失败");
-    system("pause");
-    return 0;
+    return;
   }
 
   // 高斯滤波
@@ -38,5 +40,10 @@ int main(int argc, char **argv)
   // cv::imwrite("canny算法.jpg", outImg);
 
   cv::waitKey(); // 等待键值输入
-  return 0;
+}
+
+int main(int argc, char **argv)
+{
+  ::testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
 }

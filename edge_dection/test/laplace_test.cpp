@@ -1,12 +1,15 @@
+
+#include <gtest/gtest.h>
+
 #include "laplace.h"
 
-int main(int argc, char **argv)
+TEST(LaplaceTest, test1)
 {
   cv::Mat src = cv::imread("../assets/woman.jpg", 0);
   if (!src.data || src.channels() != 1)
   {
     fprintf(stderr, "read image fail\n");
-    return -1;
+    return;
   }
   int width{400}, height{400};
   cv::resize(src, src, cv::Size(width, height));
@@ -25,5 +28,10 @@ int main(int argc, char **argv)
 
   // save_image(src, dst, width, height / 2, "E:/GitCode/CUDA_Test/test_data/images/laplacian_result.png");
   cv::waitKey(); // 等待键值输入
-  return 0;
+}
+
+int main(int argc, char **argv)
+{
+  ::testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
 }

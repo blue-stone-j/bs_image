@@ -1,15 +1,17 @@
 
+#include <gtest/gtest.h>
+
+
 #include "roberts.h"
 
-int main(int argc, char **argv)
+TEST(RobertsTest, test1)
 {
   cv::Mat src, src_binary, src_gray;
   src = cv::imread("../assets/woman.jpg");
   if (src.empty())
   {
     printf("读取图像文件失败");
-    system("pause");
-    return 0;
+    return;
   }
   cv::imshow("原图", src);
   cv::cvtColor(src, src_gray, cv::COLOR_BGR2GRAY);
@@ -19,5 +21,10 @@ int main(int argc, char **argv)
   cv::imshow("dstImage", dstImage);
 
   cv::waitKey(0);
-  return 0;
+}
+
+int main(int argc, char **argv)
+{
+  ::testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
 }
