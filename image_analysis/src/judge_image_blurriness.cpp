@@ -76,7 +76,7 @@ double computeBlurFFT(const cv::Mat &gray, double radiusRatio = 0.1)
 
 int main()
 {
-  cv::Mat img = cv::imread("image.jpg", cv::IMREAD_GRAYSCALE);
+  cv::Mat img = cv::imread("../../assets/桂林.jpg", cv::IMREAD_GRAYSCALE);
   if (img.empty())
   {
     std::cerr << "Image not found\n";

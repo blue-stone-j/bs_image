@@ -3,7 +3,7 @@
 int main(int argc, char **argv)
 {
   // Load input image in grayscale
-  cv::Mat src = cv::imread("input.jpg", cv::IMREAD_GRAYSCALE);
+  cv::Mat src = cv::imread("../../assets/sky.jpg", cv::IMREAD_GRAYSCALE);
   if (src.empty())
   {
     std::cerr << "Error: Could not load image." << std::endl;

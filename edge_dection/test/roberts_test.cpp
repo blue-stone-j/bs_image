@@ -7,7 +7,7 @@
 TEST(RobertsTest, test1)
 {
   cv::Mat src, src_binary, src_gray;
-  src = cv::imread("../assets/woman.jpg");
+  src = cv::imread("../../assets/桂林.jpg");
   if (src.empty())
   {
     printf("读取图像文件失败");

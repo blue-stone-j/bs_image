@@ -7,7 +7,7 @@ int main(int argc, char **argv)
   cv::Mat image;
   if (argc == 1)
   {
-    image = cv::imread("../assets/1.pgm");
+    image = cv::imread("../../assets/1.pgm");
   }
   else
   {

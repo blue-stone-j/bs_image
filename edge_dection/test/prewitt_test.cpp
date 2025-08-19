@@ -5,7 +5,7 @@
 
 TEST(PrewittTest, test1)
 {
-  cv::Mat img = cv::imread("../assets/woman.jpg", cv::IMREAD_GRAYSCALE);
+  cv::Mat img = cv::imread("../../assets/桂林.jpg", cv::IMREAD_GRAYSCALE);
   if (img.empty())
   {
     printf("读取图像文件失败");
@@ -21,8 +21,6 @@ TEST(PrewittTest, test1)
   cv::Mat kernel_y  = cv::Mat_<float>(3, 3, values_y);
 
   Prewitt(img, output_img, kernel_x, kernel_y);
-
-  // cv::imwrite(R"(../assets/woman_.jpg)", output_img);
 
   cv::imshow("img", img);
   cv::imshow("output_img", output_img);

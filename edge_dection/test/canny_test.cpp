@@ -7,7 +7,7 @@
 
 TEST(CannyTest, test1)
 {
-  cv::Mat img = imread("../assets/woman.jpg", cv::IMREAD_GRAYSCALE); // 从文件中加载灰度图像
+  cv::Mat img = imread("../../assets/桂林.jpg", cv::IMREAD_GRAYSCALE); // 从文件中加载灰度图像
 
   // 读取图片失败，则停止
   if (img.empty())

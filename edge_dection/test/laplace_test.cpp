@@ -5,7 +5,7 @@
 
 TEST(LaplaceTest, test1)
 {
-  cv::Mat src = cv::imread("../assets/woman.jpg", 0);
+  cv::Mat src = cv::imread("../../assets/桂林.jpg", 0);
   if (!src.data || src.channels() != 1)
   {
     fprintf(stderr, "read image fail\n");

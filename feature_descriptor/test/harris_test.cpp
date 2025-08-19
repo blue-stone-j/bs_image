@@ -10,7 +10,7 @@ TEST(Test, test1)
 {
   Harris harris;
 
-  std::string path = "../assets/";
+  std::string path = "../../assets/";
 
   cv::Mat img = cv::imread(path + "1.pgm", cv::IMREAD_GRAYSCALE);
   std::vector<cv::Point> corners;

@@ -5,7 +5,7 @@
 
 TEST(SobelTest, test1)
 {
-  cv::Mat img = cv::imread("../assets/woman.jpg", cv::IMREAD_GRAYSCALE);
+  cv::Mat img = cv::imread("../../assets/桂林.jpg", cv::IMREAD_GRAYSCALE);
   if (img.empty())
   {
     printf("读取图像文件失败");
