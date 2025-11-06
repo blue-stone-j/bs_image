@@ -17,5 +17,8 @@ target_link_libraries(brightness ${TARGET_LIBRARIES})
 add_executable(enhance_gray_image src/enhance_gray_image.cpp)
 target_link_libraries(enhance_gray_image ${TARGET_LIBRARIES})
 
+add_executable(remap_color src/remap_color.cpp)
+target_link_libraries(remap_color ${TARGET_LIBRARIES})
+
 add_executable(sharpen_gray_image src/sharpen_gray_image.cpp)
 target_link_libraries(sharpen_gray_image ${TARGET_LIBRARIES})
